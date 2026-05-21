@@ -2,15 +2,12 @@ DROP DATABASE IF EXISTS hackthon;
 CREATE DATABASE hackthon;
 USE hackthon;
 
--- ============================================================
--- DDL
--- ============================================================
 CREATE TABLE customers (
     customers_id  VARCHAR(10)  PRIMARY KEY,
     full_name     VARCHAR(150) NOT NULL,
     phone_number  VARCHAR(10)  NOT NULL UNIQUE,
     email         VARCHAR(100) NOT NULL,
-    join_date     DATE         NOT NULL DEFAULT (CURRENT_DATE)
+    join_date     DATE   NOT NULL DEFAULT (CURRENT_DATE)
 );
 
 CREATE TABLE insurance_packages (
